@@ -21,7 +21,8 @@ export class BreadcrumbsComponent  {
     });
   }
   ngOnDestroy(): void {
-    this.tituloSub$
+    this.tituloSub$.unsubscribe();
+      document.title = `Admin Pro`;
   }
   getArgumentosRuta(){
     return this.ro.events
